@@ -1,0 +1,36 @@
+create database system2;
+
+use system2;
+
+create table student(
+id int primary key,
+name varchar(50),
+grade char(2),
+city varchar(20)
+);
+
+insert into student
+(id ,name, grade, city)
+values
+(101, "Tanushk", "77", "mumbai"),
+(102, "Manish", "85", "pune"),
+(103, "Aaryan", "52", "Delhi" ),
+(104, "Pratiksha", "32", "Mumbai" ),
+(105, "Aaryan", "98", "pune" ),
+(106, "Aaryan", "74", "Delhi" ),
+(107, "Aaryan", "45", "mumbai" ),
+(108, "Aaryan", "63", "Delhi" ),
+(109, "Aaryan", "52", "Delhi" ),
+(110, "Aaryan", "88", "Delhi" );
+
+
+select *from student;
+
+alter table student 
+add column age int not null default 19;
+
+alter table student 
+drop column age;
+
+alter table student 
+rename to student_data;
